@@ -1,0 +1,79 @@
+---
+import PageLayout from "@/layouts/Base.astro";
+
+const meta = {
+    description: "A guide for first-time visitors to a Gurdwara, including dress code and etiquette.",
+    title: "First-Time Visitor's Guide to a Gurdwara",
+};
+---
+
+<PageLayout meta={meta}>
+    <div class="mb-8">
+        <h1 class="text-3xl font-bold mb-6 text-center">First-Time Visitor's Guide to a Gurdwara</h1>
+        <p class="text-lg mb-4">
+                    Visiting a Gurdwara for the first time can be a spiritually enriching experience. This guide will help you understand the basic etiquette, dress code, and practices to ensure a respectful and meaningful visit. Members of the sangat (community) will welcome any questions you may have. For more, please reach out to a member of the Gurdwara team via the <a href="/contact" class="text-accent-one underline">Contact page</a>.
+ 
+        </p>
+    </div>
+
+    <!-- Dress Code Section -->
+    <div class="mb-8">
+        <h2 class="text-2xl font-bold mb-4">Dress Code</h2>
+        <p class="text-lg mb-4">
+            Visitors are encouraged to dress modestly when visiting a Gurdwara. Here are some key points to keep in mind:
+        </p>
+        <ul class="list-disc list-inside text-lg space-y-2">
+            <li>Wear clothing that covers your shoulders and knees.</li>
+            <li>Head coverings are required for everyone. Men can use a handkerchief or scarf, and women can use a scarf or dupatta. Clean ramals (head coverings) are provided at the entrance. </li>
+            <li>Remove your shoes before entering the main prayer hall.</li>
+        </ul>
+    </div>
+     <!-- Dress Code Image Section -->
+    <div class="mt-6 flex justify-center">
+        <img 
+            src="/assets/images/DressCode.png" 
+            alt="Dress Code Example for Gurdwara Visitors" 
+            class="w-full max-w-md rounded-lg shadow-lg"
+        />
+    </div>
+
+    <!-- Etiquette Section -->
+    <div class="mb-8">
+        <h2 class="text-2xl font-bold mb-4">Etiquette</h2>
+        <p class="text-lg mb-4">
+            Gurdwaras are places of worship and community service. Please follow these guidelines to show respect:
+        </p>
+        <ul class="list-disc list-inside text-lg space-y-2">
+            <li>Bow respectfully before the Guru Granth Sahib Ji (the Sikh holy scripture) upon entering the prayer hall.</li>
+            <li>Maintain silence or speak in hushed tones inside the prayer hall.</li>
+            <li>Do not bring tobacco, alcohol, or intoxicants into the Gurdwara premises. If under the influence of any of the aforementioned, you will be asked to leave.</li>
+            <li>Participate in the langar (community kitchen), and sit on the floor as a sign of equality. Note: if you have a handicap, disability, or are elderely, benches are present in the main hall and langar hall for your convenience.</li>
+        </ul>
+    </div>
+
+    <!-- What to Expect Section -->
+    <div class="mb-8">
+        <h2 class="text-2xl font-bold mb-4">What to Expect</h2>
+        <p class="text-lg mb-4">
+            A typical visit to a Gurdwara includes:
+        </p>
+        <ul class="list-disc list-inside text-lg space-y-2">
+            <li>Listening to kirtan (devotional hymns) sung by the congregation.</li>
+            <li>Offering a small donation if you wish, though it is not mandatory.</li>
+            <li>Receiving "Karah Prasad," a sweet offering symbolizing equality and blessings.</li>
+             <li>An English translation of the service will be presented on the screens at the front of the hall.</li>
+        </ul>
+    </div>
+
+    <!-- Inspirational Quote Section -->
+    <blockquote class="border-l-4 border-accent-one pl-4 italic my-6">
+        "ਵਿਚਿ ਦੁਨੀਆ ਸੇਵ ਕਮਾਈਐ ॥<br/>
+        ਤਾ ਦਰਗਹ ਬੈਸਣੁ ਪਾਈਐ ॥"
+        <br/>
+        <span class="text-sm mt-2 block">
+            "In the midst of this world, do seva (selfless service),<br/>
+            and you shall be given a place of honor in the Court of the Lord."<br/>
+            - Sri Guru Granth Sahib Ji
+        </span>
+    </blockquote>
+</PageLayout>

@@ -1,0 +1,105 @@
+---
+import PageLayout from "@/layouts/Base.astro";
+
+const meta = {
+    description: "Contact GSS of NT",
+    title: "Contact/Donate",
+};
+---
+
+<PageLayout meta={meta}>
+    <div class="prose prose-citrus max-w-none">
+        <h1 class="title mb-6">Contact and Donate</h1>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+                <form 
+                    class="space-y-6"
+                    action="https://formspree.io/f/your-form-id" 
+                    method="POST"
+                >
+                    <div>
+                        <label for="name" class="block text-sm font-medium">Full Name</label>
+                        <input
+                            type="text"
+                            name="name"
+                            id="name"
+                            required
+                            class="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 dark:border-gray-700 dark:bg-gray-800"
+                        />
+                    </div>
+
+                    <div>
+                        <label for="phone" class="block text-sm font-medium">Phone (Optional)</label>
+                        <input
+                            type="tel"
+                            name="phone"
+                            id="phone"
+                            class="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 dark:border-gray-700 dark:bg-gray-800"
+                        />
+                    </div>
+
+                    <div>
+                        <label for="email" class="block text-sm font-medium">Email</label>
+                        <input
+                            type="email"
+                            name="email"
+                            id="email"
+                            required
+                            class="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 dark:border-gray-700 dark:bg-gray-800"
+                        />
+                    </div>
+
+                    <div>
+                        <label for="message" class="block text-sm font-medium">Message</label>
+                        <textarea
+                            name="message"
+                            id="message"
+                            rows="4"
+                            required
+                            class="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 dark:border-gray-700 dark:bg-gray-800"
+                        ></textarea>
+                    </div>
+
+                    <button
+                        type="submit"
+                        class="rounded-md bg-accent-one px-6 py-2 text-white hover:bg-accent-two transition-colors"
+                    >
+                        Send Message
+                    </button>
+                </form>
+            </div>
+
+            <div class="space-y-6">
+                <div>
+                    <h2 class="text-xl font-bold mb-4">Connect With Us</h2>
+                    <div class="space-y-3">
+                        <p class="flex items-center gap-2">
+                            <span class="font-medium">Email:</span>
+                            <a href="mailto:contact@dfwss.com" class="text-accent-one hover:text-accent-two">
+                                contact@GSSofNT.com
+                            </a>
+                        </p>
+                        <p class="flex items-center gap-2">
+                            <span class="font-medium">Instagram:</span>
+                            <a href="https://instagram.com/GSSofNT" target="_blank" rel="noopener noreferrer" class="text-accent-one hover:text-accent-two">
+                                @GSSofNT
+                            </a>
+                        </p>
+                        <p class="flex items-center gap-2">
+                            <span class="font-medium">Location:</span>
+                            <a 
+                                href="https://www.google.com/maps?client=safari&sca_esv=4edcfc4bd6863fc2&rls=en&biw=985&bih=527&sxsrf=AHTn8zorRk3vWWmrsArERwfM8y49doJbcQ:1744409337156&kgmid=/g/1tvm34_3&shndl=30&shem=lcuae,uaasie&kgs=1ef1142634cebc05&um=1&ie=UTF-8&fb=1&gl=us&sa=X&geocode=KRd2Q2mRH0yGMZHXVhvqrtWL&daddr=1201+Abrams+Rd,+Richardson,+TX+75081" 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                class="text-accent-one hover:text-accent-two"
+                            >
+                                1201 Abrams Rd, Richardson, TX 75081
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</PageLayout>
