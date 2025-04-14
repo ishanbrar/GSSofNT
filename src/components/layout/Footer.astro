@@ -3,16 +3,15 @@ import { menuLinks, siteConfig } from "@/site.config";
 
 const year = new Date().getFullYear();
 ---
-
 <footer
-    class="semibold mt-auto flex w-full flex-col items-center justify-start gap-y-2 pb-4 pt-8 text-center align-top text-accent sm:flex-row sm:justify-start sm:text-sm"
+    class="semibold mt-auto flex flex-col w-full items-center justify-start gap-y-2 pb-4 pt-8 text-center align-top text-accent sm:flex-row sm:justify-start sm:text-sm"
 >
     <div class="me-0 font-semibold sm:me-4">
         &copy; {siteConfig.author} {year}.<span class="inline-block">&nbsp;&nbsp;GSS of North Texas</span>
     </div>
     <nav
         aria-label="More on this site"
-        class="flex justify-start space-x-4 font-medium text-light md:w-auto w-auto"
+        class="flex flex-col items-center space-y-2 sm:flex-row sm:space-y-0 sm:space-x-4 font-medium text-light md:w-auto w-auto"
     >
         {
             menuLinks.map((link) => (
