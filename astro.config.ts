@@ -49,9 +49,9 @@ export default defineConfig({
       icon: "public/gsslogo.svg", // the source for generating favicon & icons
       icons: [
         {
-          src: "icons/apple-touch-icon.png", // used in src/components/BaseHead.astro L:26
+          src: "icons/GSSlogo.svg", // used in src/components/BaseHead.astro L:26
           sizes: "180x180",
-          type: "image/png",
+          type: "image/svg",
         },
         {
           src: "icons/icon-192.png",
