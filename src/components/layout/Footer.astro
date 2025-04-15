@@ -1,31 +1,35 @@
 ---
-import { menuLinks, siteConfig } from "@/site.config";
+import { siteConfig } from "@/site.config";
 
 const year = new Date().getFullYear();
 ---
 <footer
-    class="semibold mt-auto flex flex-col w-full items-center justify-start gap-y-2 pb-4 pt-8 text-center align-top text-accent sm:flex-row sm:justify-start sm:text-sm"
+    class="semibold mt-auto flex flex-col sm:flex-row w-full items-center justify-between gap-x-8 gap-y-4 pb-8 pt-8 text-center align-top text-accent sm:text-base"
 >
-    <div class="me-0 font-semibold sm:me-4">
-        &copy; {siteConfig.author} {year}.<span class="inline-block">&nbsp;&nbsp;GSS of North Texas</span>
-    </div>
-    <nav
-        aria-label="More on this site"
-        class="flex flex-col items-center space-y-2 sm:flex-row sm:space-y-0 sm:space-x-4 font-medium text-light md:w-auto w-auto"
-    >
-        {
-            menuLinks.map((link) => (
-                <a class="underline-offset-2 hover:text-accent hover:underline" href={link.path}>
-                    {link.title}
-                </a>
-            ))
-        }
-        <!-- Add Contact Us Button -->
+    
+
+    <!-- Logo and Contact Us Section -->
+    <div class="flex items-center space-x-4">
+        <!-- Logo Section -->
+        <a href="/" class="font-semibold">
+            <img 
+                src="/assets/images/GSSlogo.PNG" 
+                alt="GSS of North Texas Logo" 
+                class="h-20 w-auto object-contain"
+            />
+        </a>
+
+        <!-- Contact Us Link -->
         <a
             href="/contact"
-            class="underline-offset-2 hover:text-accent hover:underline"
+            class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-accent transition-all"
         >
             Contact Us
         </a>
-    </nav>
+    </div>
+<!-- Copyright Section -->
+    <div class="text-sm font-medium text-gray-600 dark:text-gray-400 sm:text-left">
+        © JJS {year}. GSS of North Texas
+    </div>
+    
 </footer>
