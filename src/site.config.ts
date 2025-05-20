@@ -40,4 +40,8 @@ export const menuLinks: { path: string; title: string }[] = [
 		path: "/how/",
 		title: "Visitor's Guide",
 	},
+	{
+        path: "/camp/",
+        title: "Camp Signup",
+    },
 ];
