@@ -1,0 +1,44 @@
+---
+import { getShaheeds } from "@/data/shaheeds";
+
+const shaheeds = getShaheeds();
+---
+
+<section id="shaheed-gallery" class="mb-10 scroll-mt-28" aria-labelledby="shaheed-gallery-heading">
+	<h2 id="shaheed-gallery-heading" class="mb-8 text-center text-2xl font-bold">Shaheed Gallery</h2>
+
+	<ul
+		class="grid list-none grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5"
+		role="list"
+	>
+		{
+			shaheeds.map(({ id, src, cardName, year }) => (
+				<li>
+					<a
+						href={`/shaheeds/${id}/`}
+						aria-label={`${cardName}${year === "—" ? "" : `, ${year}`}. Open full memorial page.`}
+						class="group block h-full rounded-xl border border-accent-one/20 bg-bgColor shadow-md outline-none ring-accent-two transition hover:border-accent-two/40 hover:shadow-lg focus-visible:ring-2"
+					>
+						<figure class="flex h-full flex-col overflow-hidden rounded-[inherit]">
+							<div class="aspect-[3/4] w-full overflow-hidden bg-black/5">
+								<img
+									src={src}
+									alt=""
+									class="h-full w-full object-contain object-top transition group-hover:brightness-95 dark:group-hover:brightness-110"
+									loading="lazy"
+									decoding="async"
+								/>
+							</div>
+							<figcaption class="border-t border-accent-one/15 p-3 text-center text-sm leading-snug">
+								<p class="line-clamp-3 font-medium text-textColor">{cardName}</p>
+								<p class="mt-1 tabular-nums text-textColor/75">
+									{year === "—" ? "Year unknown" : year}
+								</p>
+							</figcaption>
+						</figure>
+					</a>
+				</li>
+			))
+		}
+	</ul>
+</section>

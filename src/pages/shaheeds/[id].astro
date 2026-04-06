@@ -1,0 +1,58 @@
+---
+import PageLayout from "@/layouts/Base.astro";
+import { getShaheeds, getShaheedById } from "@/data/shaheeds";
+import type { GetStaticPaths } from "astro";
+
+export const getStaticPaths = (() => {
+	const all = getShaheeds();
+	return all.map(({ id }) => ({ params: { id } }));
+}) satisfies GetStaticPaths;
+
+const { id } = Astro.params;
+const shaheed = id ? getShaheedById(id) : undefined;
+
+if (!shaheed) {
+	return Astro.redirect("/why/#shaheed-gallery");
+}
+
+const { src, lines, cardName, year } = shaheed;
+
+const meta = {
+	description: `${cardName}${year !== "—" ? ` — martyrdom ${year}.` : "."} Memorial portrait with English caption — Gurdwara Singh Sabha of North Texas.`,
+	title: `${cardName} — Shaheed Gallery`,
+};
+---
+
+<PageLayout meta={meta}>
+	<article class="mx-auto max-w-2xl">
+		<p class="mb-6">
+			<a
+				href="/why/#shaheed-gallery"
+				class="text-accent-two underline underline-offset-2 hover:brightness-110"
+				>← Back to gallery</a
+			>
+		</p>
+
+		<h1 class="title mb-2 text-center text-2xl font-bold md:text-3xl">{cardName}</h1>
+		<p class="mb-8 text-center text-lg text-textColor/80 tabular-nums">
+			{year === "—" ? "Year of martyrdom not listed in caption" : `Year of martyrdom: ${year}`}
+		</p>
+
+		<figure class="overflow-hidden rounded-xl border border-accent-one/20 bg-bgColor shadow-md">
+			<div class="w-full bg-black/5">
+				<img
+					src={src}
+					alt={`${cardName}. ${lines.join(" ")}`}
+					class="mx-auto max-h-[min(85vh,920px)] w-full object-contain"
+					loading="eager"
+					decoding="async"
+				/>
+			</div>
+			<figcaption class="border-t border-accent-one/15 p-6 text-base leading-relaxed">
+				{lines.map((line) => (
+					<p class="mb-2 last:mb-0">{line}</p>
+				))}
+			</figcaption>
+		</figure>
+	</article>
+</PageLayout>
