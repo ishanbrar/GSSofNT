@@ -37,10 +37,6 @@ export const menuLinks: { path: string; title: string }[] = [
 		title: "Sikh History Museum",
 	},
 	{
-		path: "/why/#shaheed-gallery",
-		title: "Shaheed Gallery",
-	},
-	{
 		path: "/how/",
 		title: "Visitor's Guide",
 	},
