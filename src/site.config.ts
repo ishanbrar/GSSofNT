@@ -44,5 +44,5 @@ export const navEntries: NavEntry[] = [
 		],
 	},
 	{ type: "link", path: "/why/", title: "Sikh History Museum" },
-	{ type: "link", path: "/camp/", title: "Camp Signup" },
+	{ type: "link", path: "/gallery/", title: "Gallery" },
 ];

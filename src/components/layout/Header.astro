@@ -1,5 +1,4 @@
 ---
-import Search from "@/components/Search.astro";
 import ThemeToggle from "@/components/ThemeToggle.astro";
 import { siteConfig, navEntries, type NavChild, type NavEntry } from "@/site.config";
 import { Icon } from "astro-icon/components";
@@ -30,7 +29,7 @@ function groupSectionActive(entry: Extract<NavEntry, { type: "group" }>): boolea
 
 <header
 	id="main-header"
-	class="fixed px-4 md:px-0 left-0 z-20 flex items-center md:relative top-0 h-16 w-full bg-bgColor md:bg-transparent overflow-hidden md:overflow-visible"
+	class="fixed left-0 top-0 z-20 flex w-full items-center overflow-hidden border-b border-special-lighter/80 bg-bgColor/95 py-2 pl-4 pr-3 backdrop-blur-md supports-[backdrop-filter]:bg-bgColor/88 sm:px-5 md:relative md:top-auto md:mb-6 md:overflow-visible md:rounded-xl md:border md:border-special-lighter md:bg-special-light/50 md:px-6 md:py-3.5 md:shadow-[0_8px_32px_-12px_rgba(0,0,0,0.18)] dark:border-special-lighter/50 dark:md:bg-color-100/35 lg:px-8 min-h-[4rem] md:min-h-0"
 >	
 	<!-- Background 
 			TODO: This approach is not optimal and requires improvements. 
@@ -69,7 +68,7 @@ function groupSectionActive(entry: Extract<NavEntry, { type: "group" }>): boolea
     <img 
         src="/assets/images/GSSlogo.PNG" 
         alt={siteConfig.title} 
-        class="inline-block h-24 w-24 object-contain drop-shadow-[0px_2.5px_2.5px_rgba(0,0,0,0.35)]"
+        class="inline-block h-16 w-16 object-contain drop-shadow-[0px_2.5px_2.5px_rgba(0,0,0,0.35)] sm:h-[4.5rem] sm:w-[4.5rem] md:h-[5.5rem] md:w-[5.5rem]"
     />
 </div>
 				
@@ -77,7 +76,7 @@ function groupSectionActive(entry: Extract<NavEntry, { type: "group" }>): boolea
 			</a>
 			<nav
 				aria-label="Main menu"
-				class="top-20 text-sm mx-auto ml-4 ml-auto hidden flex-col items-end justify-center gap-x-4 rounded-md bg-bgColor font-medium text-accent-two shadow backdrop-blur group-[.menu-open]:z-50 group-[.menu-open]:flex sm:static sm:z-auto sm:flex-row sm:items-center sm:rounded-none sm:bg-transparent sm:shadow-none sm:backdrop-blur-none md:flex md:overflow-visible"
+				class="top-20 mx-auto ml-4 ml-auto hidden flex-col items-end justify-center gap-x-3 gap-y-2 rounded-md bg-bgColor px-2 py-2 text-base font-medium text-accent-two shadow backdrop-blur group-[.menu-open]:z-50 group-[.menu-open]:flex sm:static sm:z-auto sm:flex-row sm:items-center sm:gap-x-5 sm:rounded-none sm:bg-transparent sm:px-0 sm:py-0 sm:shadow-none sm:backdrop-blur-none md:flex md:gap-x-7 md:text-lg md:overflow-visible"
 				id="main-navigation-menu"
 			>	
 				<!--				
@@ -127,7 +126,7 @@ function groupSectionActive(entry: Extract<NavEntry, { type: "group" }>): boolea
 								>
 									{entry.title}
 									<Icon
-										class="size-3.5 opacity-70"
+										class="size-3.5 opacity-70 md:size-4"
 										name="solar:alt-arrow-down-linear"
 										aria-hidden="true"
 									/>
@@ -142,7 +141,7 @@ function groupSectionActive(entry: Extract<NavEntry, { type: "group" }>): boolea
 											<a
 												role="menuitem"
 												aria-current={isCurrent(child.path) ? "page" : false}
-												class="block px-4 py-2 text-left text-sm hover:bg-accent-base/10 hover:text-accent-one"
+												class="block px-4 py-2.5 text-left text-base hover:bg-accent-base/10 hover:text-accent-one md:py-3"
 												data-astro-prefetch
 												href={child.path}
 											>
@@ -158,7 +157,7 @@ function groupSectionActive(entry: Extract<NavEntry, { type: "group" }>): boolea
 				
 				<!-- Contact link targets src/pages/contact.astro -->
 				<a
-					class="flex h-8 items-center rounded-lg bg-accent-base/5 px-4 text-accent-base underline-offset-2 hover:bg-accent-base/10"
+					class="flex h-9 shrink-0 items-center rounded-lg bg-accent-base/5 px-3 text-sm text-accent-base underline-offset-2 hover:bg-accent-base/10 sm:h-10 sm:px-4 sm:text-base md:h-11 md:px-5 md:text-lg"
 					data-astro-prefetch
 					href="/contact"
 				>
@@ -216,20 +215,20 @@ function groupSectionActive(entry: Extract<NavEntry, { type: "group" }>): boolea
 			</div>
 			-->
 
-			<div class="ml-auto w-fit">
-    <div id="buttons-panel" class="top-4 md:top-8 flex space-x-6 items-center">
+			<div class="ml-auto w-fit shrink-0">
+    <div id="buttons-panel" class="top-4 flex items-center space-x-4 sm:space-x-5 md:top-8 md:space-x-7">
         <!-- US Flag Icon -->
         <a 
             href="https://en.wikipedia.org/wiki/Sikhism_in_the_United_States"
             target="_blank"
             rel="noopener noreferrer"
-            class="flex items-center justify-center h-8 rounded-lg hover:bg-accent-base/10"
+            class="flex h-9 items-center justify-center rounded-lg hover:bg-accent-base/10 md:h-11"
             aria-label="Sikhism in the United States"
         >
             <img 
                 src="/assets/images/USflag.png"
                 alt="US Flag"
-                class="h-6 w-auto drop-shadow-[0px_1.5px_1.5px_rgba(0,0,0,0.175)]"
+                class="h-6 w-auto drop-shadow-[0px_1.5px_1.5px_rgba(0,0,0,0.175)] md:h-8"
             />
         </a>
 

@@ -1,0 +1,129 @@
+---
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+import PageLayout from "@/layouts/Base.astro";
+
+const meta = {
+	description:
+		"Photo gallery: GSS of North Texas sangat, civic engagement, and the Texas House Vaisakhi proclamation (14 April 2023).",
+	title: "Gallery — GSS of North Texas",
+};
+
+const modules = import.meta.glob<{ default: ImageMetadata }>(
+	"/src/assets/images/WhatsApp Image*.jpeg",
+	{ eager: true },
+);
+
+const galleryImages = Object.entries(modules)
+	.sort(([a], [b]) => a.localeCompare(b))
+	.map(([, mod]) => mod.default);
+---
+
+<PageLayout meta={meta}>
+	<div class="mb-8">
+		<h1 class="mb-6 text-center text-3xl font-bold">Gallery</h1>
+
+		<div class="mx-auto mb-10 max-w-3xl space-y-4 sm:max-w-4xl lg:max-w-5xl">
+			<p class="text-lg leading-relaxed">
+				The sangat of Gurdwara Singh Sabha of North Texas has worked alongside elected representatives and
+				their teams across Texas to raise awareness of Sikhi—our faith, our values, and our presence in
+				communities statewide. Through visits, conversations, and civic engagement in Austin and here in
+				North Texas, we seek to build understanding, accurate representation, and lasting relationships between
+				the Sikh community and public leadership.
+			</p>
+			<p class="text-lg leading-relaxed">
+				These efforts helped lead the <strong>Texas House of Representatives</strong> to issue a
+				<strong>Vaisakhi proclamation on 14 April 2023</strong>, recognizing the festival and the contributions
+				of Sikh Texans.
+			</p>
+		</div>
+
+		{
+			galleryImages.length === 0 ? (
+				<p class="text-center text-textColor/80">Gallery images will appear here once they are added.</p>
+			) : (
+				<ul class="grid list-none grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3" role="list">
+					{galleryImages.map((src, i) => {
+						const alt = `Gurdwara sangat civic engagement, photo ${i + 1}`;
+						return (
+							<li class="overflow-hidden rounded-xl border border-special-lighter bg-special-light/30 shadow-md transition-shadow hover:shadow-lg">
+								<button
+									type="button"
+									class="group block w-full cursor-zoom-in text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-one focus-visible:ring-offset-2 focus-visible:ring-offset-bgColor"
+									data-gallery-open
+									data-full-src={src.src}
+									data-alt={alt}
+									aria-label={`Open larger view: ${alt}`}
+								>
+									<Image
+										src={src}
+										alt={alt}
+										class="h-auto w-full object-cover transition-transform duration-200 group-hover:scale-[1.02]"
+										sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+										loading={i < 3 ? "eager" : "lazy"}
+									/>
+								</button>
+							</li>
+						);
+					})}
+				</ul>
+			)
+		}
+
+		<dialog
+			id="gallery-lightbox"
+			class="m-0 h-full max-h-none w-full max-w-none border-0 bg-transparent p-0 text-textColor [&::backdrop]:bg-black/60"
+			aria-label="Enlarged photo"
+		>
+			<div
+				id="gallery-lightbox-dismiss"
+				class="flex min-h-full cursor-zoom-out items-center justify-center bg-black/60 p-4"
+			>
+				<div
+					class="relative max-h-[95vh] max-w-[min(100vw-2rem,56rem)] overflow-auto rounded-xl border border-special-lighter bg-bgColor p-3 shadow-2xl"
+					id="gallery-lightbox-panel"
+				>
+					<div class="mb-2 flex justify-end">
+						<form method="dialog">
+							<button
+								type="submit"
+								class="rounded-lg border border-special-lighter bg-special-light/50 px-3 py-1.5 text-sm font-medium hover:bg-special-light"
+							>
+								Close
+							</button>
+						</form>
+					</div>
+					<img
+						id="gallery-lightbox-img"
+						class="mx-auto max-h-[min(85vh,1200px)] max-w-full object-contain"
+						alt=""
+					/>
+				</div>
+			</div>
+		</dialog>
+
+		<script>
+			const dialog = document.getElementById("gallery-lightbox");
+			const lightboxImg = document.getElementById("gallery-lightbox-img");
+			const dismiss = document.getElementById("gallery-lightbox-dismiss");
+			const panel = document.getElementById("gallery-lightbox-panel");
+			if (dialog && lightboxImg && dismiss && panel) {
+				document.querySelectorAll("[data-gallery-open]").forEach((btn) => {
+					btn.addEventListener("click", () => {
+						const full = btn.getAttribute("data-full-src");
+						const alt = btn.getAttribute("data-alt") ?? "";
+						if (full) {
+							lightboxImg.src = full;
+							lightboxImg.alt = alt;
+							dialog.showModal();
+						}
+					});
+				});
+				dismiss.addEventListener("click", (e) => {
+					if (e.target === dismiss) dialog.close();
+				});
+				panel.addEventListener("click", (e) => e.stopPropagation());
+			}
+		</script>
+	</div>
+</PageLayout>
