@@ -1,0 +1,152 @@
+---
+import PageLayout from "@/layouts/Base.astro";
+import AboutSubnav from "@/components/about/AboutSubnav.astro";
+import AboutPageHero from "@/components/about/AboutPageHero.astro";
+import content from "@/data/about/visitors-guide.json";
+
+const meta = {
+	description:
+		"Visitor's guide to Gurdwara Singh Sabha of North Texas: dress code, etiquette, parking, hours, langar, and FAQs.",
+	title: "Visitor's Guide — GSS of North Texas",
+};
+
+const etiquetteSteps = [
+	[content.etiquette.step1Title, content.etiquette.step1Desc],
+	[content.etiquette.step2Title, content.etiquette.step2Desc],
+	[content.etiquette.step3Title, content.etiquette.step3Desc],
+	[content.etiquette.step4Title, content.etiquette.step4Desc],
+	[content.etiquette.step5Title, content.etiquette.step5Desc],
+	[content.etiquette.step6Title, content.etiquette.step6Desc],
+] as const;
+
+const dressRules = [
+	[content.dressCode.rule1Title, content.dressCode.rule1Desc],
+	[content.dressCode.rule2Title, content.dressCode.rule2Desc],
+	[content.dressCode.rule3Title, content.dressCode.rule3Desc],
+	[content.dressCode.rule4Title, content.dressCode.rule4Desc],
+] as const;
+
+const expectItems = [
+	content.whatToExpect.item1,
+	content.whatToExpect.item2,
+	content.whatToExpect.item3,
+	content.whatToExpect.item4,
+	content.whatToExpect.item5,
+	content.whatToExpect.item6,
+];
+
+const faqPairs = [
+	[content.faq.q1, content.faq.a1],
+	[content.faq.q2, content.faq.a2],
+	[content.faq.q3, content.faq.a3],
+	[content.faq.q4, content.faq.a4],
+	[content.faq.q5, content.faq.a5],
+	[content.faq.q6, content.faq.a6],
+	[content.faq.q7, content.faq.a7],
+	[content.faq.q8, content.faq.a8],
+	[content.faq.q9, content.faq.a9],
+	[content.faq.q10, content.faq.a10],
+	[content.faq.q11, content.faq.a11],
+	[content.faq.q12, content.faq.a12],
+] as const;
+---
+
+<PageLayout meta={meta}>
+	<AboutSubnav />
+	<AboutPageHero
+		eyebrow={content.hero.eyebrow}
+		title={content.hero.title}
+		subtitle={content.hero.subtitle}
+	/>
+
+	<section class="mb-14">
+		<h2 class="mb-3 text-2xl font-bold text-accent-two">{content.dressCode.title}</h2>
+		<p class="mb-8 max-w-3xl text-lg leading-relaxed">{content.dressCode.description}</p>
+		<div class="grid gap-6 md:grid-cols-2">
+			{
+				dressRules.map(([title, desc]) => (
+					<div class="rounded-xl border border-special-lighter bg-special-light/40 p-6">
+						<h3 class="font-semibold text-accent-one">{title}</h3>
+						<p class="mt-2 leading-relaxed">{desc}</p>
+					</div>
+				))
+			}
+		</div>
+	</section>
+
+	<section class="mb-14 rounded-2xl border border-special-lighter bg-special-light/30 p-6 md:p-10">
+		<h2 class="mb-8 text-2xl font-bold text-accent-two">{content.etiquette.title}</h2>
+		<ol class="space-y-6">
+			{
+				etiquetteSteps.map(([title, desc], idx) => (
+					<li class="flex gap-4">
+						<span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent-base/20 text-sm font-bold text-accent-one">
+							{idx + 1}
+						</span>
+						<div>
+							<h3 class="font-semibold text-accent-two">{title}</h3>
+							<p class="mt-1 leading-relaxed">{desc}</p>
+						</div>
+					</li>
+				))
+			}
+		</ol>
+	</section>
+
+	<section class="mb-14">
+		<h2 class="mb-3 text-2xl font-bold text-accent-two">{content.whatToExpect.title}</h2>
+		<p class="mb-6 max-w-3xl text-lg leading-relaxed">{content.whatToExpect.description}</p>
+		<ul class="list-inside list-disc space-y-3 md:columns-2 md:gap-x-10">
+			{expectItems.map((item) => <li class="leading-relaxed">{item}</li>)}
+		</ul>
+	</section>
+
+	<div class="mb-14 grid gap-8 md:grid-cols-2">
+		<section class="rounded-xl border border-special-lighter p-6">
+			<h2 class="text-xl font-bold text-accent-two">{content.parking.title}</h2>
+			<p class="mt-3 leading-relaxed">{content.parking.description}</p>
+		</section>
+		<section class="rounded-xl border border-special-lighter p-6">
+			<h2 class="text-xl font-bold text-accent-two">{content.transportation.title}</h2>
+			<p class="mt-3 leading-relaxed">{content.transportation.description}</p>
+		</section>
+		<section class="rounded-xl border border-special-lighter p-6">
+			<h2 class="text-xl font-bold text-accent-two">{content.hours.title}</h2>
+			<p class="mt-3 text-lg font-medium">{content.hours.schedule}</p>
+		</section>
+		<section class="rounded-xl border border-special-lighter p-6">
+			<h2 class="text-xl font-bold text-accent-two">{content.accessibility.title}</h2>
+			<p class="mt-3 leading-relaxed">{content.accessibility.description}</p>
+		</section>
+	</div>
+
+	<section class="mb-14 rounded-2xl border border-accent-one/20 bg-accent-base/5 p-6 md:p-10">
+		<h2 class="text-2xl font-bold text-accent-two">{content.langar.title}</h2>
+		<p class="mt-4 max-w-3xl leading-relaxed">{content.langar.description}</p>
+		<ul class="mt-6 grid gap-2 sm:grid-cols-2 md:grid-cols-3">
+			<li class="rounded-lg bg-bgColor/60 px-4 py-2">{content.langar.menuItem1}</li>
+			<li class="rounded-lg bg-bgColor/60 px-4 py-2">{content.langar.menuItem2}</li>
+			<li class="rounded-lg bg-bgColor/60 px-4 py-2">{content.langar.menuItem3}</li>
+			<li class="rounded-lg bg-bgColor/60 px-4 py-2">{content.langar.menuItem4}</li>
+			<li class="rounded-lg bg-bgColor/60 px-4 py-2">{content.langar.menuItem5}</li>
+			<li class="rounded-lg bg-bgColor/60 px-4 py-2">{content.langar.menuItem6}</li>
+		</ul>
+		<p class="mt-6 text-sm italic text-textColor/85">{content.langar.note}</p>
+	</section>
+
+	<section class="mb-8">
+		<h2 class="mb-8 text-2xl font-bold text-accent-two">{content.faq.title}</h2>
+		<div class="space-y-4">
+			{
+				faqPairs.map(([q, a]) => (
+					<details class="group rounded-xl border border-special-lighter bg-bgColor/50 open:bg-special-light/40">
+						<summary class="cursor-pointer list-none p-5 font-semibold text-accent-two marker:content-none [&::-webkit-details-marker]:hidden">
+							<span class="pr-6 group-open:text-accent-one">{q}</span>
+						</summary>
+						<p class="border-t border-special-lighter/80 px-5 pb-5 pt-4 leading-relaxed">{a}</p>
+					</details>
+				))
+			}
+		</div>
+	</section>
+</PageLayout>

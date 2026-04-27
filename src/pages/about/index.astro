@@ -1,0 +1,83 @@
+---
+import PageLayout from "@/layouts/Base.astro";
+import AboutSubnav from "@/components/about/AboutSubnav.astro";
+
+const meta = {
+	description: "Learn about Gurdwara Singh Sabha Richardson and its services.",
+	title: "About — Gurdwara Singh Sabha of North Texas",
+};
+---
+
+<PageLayout meta={meta}>
+	<AboutSubnav />
+	<div class="mb-8">
+		<h1 class="mb-6 text-center text-3xl font-bold">About Gurdwara Singh Sabha of North Texas</h1>
+
+		<div class="mb-8">
+			<p class="mb-4 text-lg">
+				Since 1984, Gurdwara Singh Sabha of North Texas has welcomed the Sikh community of Richardson and the
+				broader Dallas–Fort Worth region. Week after week the sangat gathers for prayer and kirtan, for
+				Gurbani and Punjabi classes for children and adults, for langar and programs that keep families and
+				neighbors connected—including sports and recreational activities on our grounds.
+			</p>
+
+			<p class="mb-6 text-lg">On an ordinary week you might join us for:</p>
+
+			<ul class="list-inside list-disc space-y-4">
+				<li>
+					<strong>Sikhi School:</strong> Lessons in Gurbani, Punjabi, and Sikh history and values for
+					children and adults.
+				</li>
+				<li>
+					<strong>Langar kitchen:</strong> Vegetarian meals, no charge, offered by sewadars to every guest.
+				</li>
+				<li>
+					<strong>Recreational facilities:</strong> Space for athletics and programs that bring families and
+					friends together.
+				</li>
+			</ul>
+		</div>
+		<!-- Image Section -->
+		<div class="mb-8">
+			<h2 class="mb-4 text-2xl font-bold">Gallery</h2>
+			<div class="grid grid-cols-1 gap-4 md:grid-cols-3">
+				<img
+					src="/assets/images/MainHall.jpg"
+					alt="Gurdwara Main Hall"
+					class="h-auto w-full rounded-lg shadow-lg"
+				/>
+				<img
+					src="/assets/images/Langar.jpg"
+					alt="Langar Hall"
+					class="h-auto w-full rounded-lg shadow-lg"
+				/>
+				<img
+					src="/assets/images/MainHallScreen.jpg"
+					alt="Community Event"
+					class="h-auto w-full rounded-lg shadow-lg"
+				/>
+			</div>
+		</div>
+
+		<blockquote class="my-6 border-l-4 border-accent-one pl-4 italic">
+			"ਵਿਚਿ ਦੁਨੀਆ ਸੇਵ ਕਮਾਈਐ ॥<br />
+			ਤਾ ਦਰਗਹ ਬੈਸਣੁ ਪਾਈਐ ॥"
+			<br />
+			<span class="mt-2 block text-sm">
+				"In the midst of this world, do seva, and you shall be given a place of honor in the Court of
+				the Lord." - Sri Guru Granth Sahib Ji
+			</span>
+		</blockquote>
+
+		<div class="mb-8">
+			<h2 class="mb-4 text-2xl font-bold">Visit Us</h2>
+			<p class="mb-4 text-lg">Address:</p>
+			<address class="text-lg font-semibold">1201 Abrams Rd, Richardson, TX 75081</address>
+			<p class="mt-4 text-lg">
+				Whether it is your first diwan or a return visit, you are welcome at langar and community events. For
+				questions ahead of time, the <a href="/contact" class="text-accent-one underline">contact page</a> reaches
+				the office and sewadars.
+			</p>
+		</div>
+	</div>
+</PageLayout>

@@ -22,26 +22,27 @@ export const siteConfig: SiteConfig = {
 	title: "GSS of NT",
 };
 
-// Used to generate links in both the Header & Footer.
-export const menuLinks: { path: string; title: string }[] = [
+export type NavChild = { path: string; title: string };
+
+export type NavEntry =
+	| { type: "link"; path: string; title: string }
+	| { type: "group"; path: string; title: string; children: NavChild[] };
+
+/** Main navigation: used in Header (and can be mirrored in Footer). */
+export const navEntries: NavEntry[] = [
+	{ type: "link", path: "/", title: "Home" },
 	{
-		path: "/",
-		title: "Home",
-	},
-	{
+		type: "group",
 		path: "/about/",
 		title: "About",
+		children: [
+			{ path: "/about/", title: "Our Gurdwara" },
+			{ path: "/about/sikhism/", title: "Sikhism" },
+			{ path: "/about/ceremonies/", title: "Ceremonies" },
+			{ path: "/about/ten-gurus/", title: "Ten Gurus" },
+			{ path: "/about/visitors-guide/", title: "Visitor's Guide" },
+		],
 	},
-	{
-		path: "/why/",
-		title: "Sikh History Museum",
-	},
-	{
-		path: "/how/",
-		title: "Visitor's Guide",
-	},
-	{
-        path: "/camp/",
-        title: "Camp Signup",
-    },
+	{ type: "link", path: "/why/", title: "Sikh History Museum" },
+	{ type: "link", path: "/camp/", title: "Camp Signup" },
 ];

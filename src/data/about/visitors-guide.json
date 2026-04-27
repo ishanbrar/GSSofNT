@@ -1,0 +1,98 @@
+{
+  "hero": {
+    "eyebrow": "Welcome to Our Gurdwara",
+    "title": "Visitor's Guide",
+    "subtitle": "Everyone is welcome at Gurdwara Singh Sabha of North Texas. What follows will help you prepare for a respectful, meaningful visit."
+  },
+  "dressCode": {
+    "title": "Dress Code",
+    "description": "These simple guidelines help honor the sacred space and the sangat when you enter a Gurdwara.",
+    "rule1Title": "Cover Your Head",
+    "rule1Desc": "Please cover your head before you go inside. Scarves are available near the door if you do not bring your own.",
+    "rule2Title": "Remove Your Shoes",
+    "rule2Desc": "Leave shoes at the entrance racks; socks or bare feet are fine indoors.",
+    "rule3Title": "Modest Clothing",
+    "rule3Desc": "Please wear modest, respectful clothing. Shorts, sleeveless tops, or revealing clothing are not appropriate.",
+    "rule4Title": "No Tobacco or Alcohol",
+    "rule4Desc": "Tobacco, alcohol, and non-vegetarian food are not permitted on the Gurdwara premises."
+  },
+  "etiquette": {
+    "title": "Etiquette & Conduct",
+    "step1Title": "Enter Respectfully",
+    "step1Desc": "After removing shoes and covering your head, wash your hands at the provided stations.",
+    "step2Title": "Matha Tekna (Bow Before the Granth)",
+    "step2Desc": "In the main hall, approach the front, kneel, and bow until the forehead touches the floor (Matha Tekna) before Sri Guru Granth Sahib Ji.",
+    "step3Title": "Sit on the Floor",
+    "step3Desc": "Seating is on the floor carpets. Men and women may sit in the same area or separate sides. Chairs are available for those unable to sit on the floor.",
+    "step4Title": "Listen to Kirtan",
+    "step4Desc": "Kirtan (devotional music) is performed continuously. Listen quietly and respectfully. Clapping is appropriate.",
+    "step5Title": "Accept Karah Parshad",
+    "step5Desc": "At the end of the Ardas (prayer), Karah Parshad (sacred pudding) is distributed. Accept it with both hands cupped together.",
+    "step6Title": "Join Langar",
+    "step6Desc": "After diwan, follow the sangat to langar in the Langar Hall—open to every guest, every background."
+  },
+  "whatToExpect": {
+    "title": "What to Expect During Your Visit",
+    "description": "Most people find a Gurdwara visit calm, hospitable, and uplifting. You might notice:",
+    "item1": "Continuous Kirtan (devotional music) in the main hall",
+    "item2": "A Granthi (reader) reading from Sri Guru Granth Sahib Ji",
+    "item3": "Ardas (collective prayer) at scheduled times",
+    "item4": "Distribution of Karah Parshad (sacred offering)",
+    "item5": "Free Langar (vegetarian meal) in the Langar Hall",
+    "item6": "A warm welcome from fellow Sangat members"
+  },
+  "parking": {
+    "title": "Parking",
+    "description": "There is plenty of free parking on site, with entry from Abrams Rd."
+  },
+  "transportation": {
+    "title": "Transportation Assistance",
+    "description": "Transportation assistance may be available for Sunday Diwan and special Akhand Path events. Please call us at (972) 235-3388 in advance to arrange."
+  },
+  "hours": {
+    "title": "Hours",
+    "schedule": "Open Daily: 7:00 AM – 9:00 PM"
+  },
+  "accessibility": {
+    "title": "Accessibility",
+    "description": "Accessible entrances and seating are provided, and chairs are set out in the main hall for those who need them. Call ahead if you would like help planning your visit."
+  },
+  "langar": {
+    "title": "Langar — Free Community Kitchen",
+    "description": "Langar expresses the Gurus' ideal of equality and seva: a vegetarian meal, always free, for every guest.",
+    "menuItem1": "Dal (lentil soup)",
+    "menuItem2": "Roti (whole wheat bread)",
+    "menuItem3": "Sabzi (seasonal vegetables)",
+    "menuItem4": "Yogurt",
+    "menuItem5": "Fresh salad",
+    "menuItem6": "Chai (spiced tea)",
+    "note": "Everything served is strictly vegetarian, cooked and plated by volunteer sewadars."
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "q1": "Do I need to be Sikh to visit?",
+    "a1": "No. Gurdwaras are open to people of every faith, culture, and background. Join prayers, langar, or other parts of the program as you feel comfortable—we are glad you came.",
+    "q2": "What should I bring?",
+    "a2": "Bring an open mind; coverings are on hand if you need one, though you may prefer your own scarf. Shoes come off at the door. Beyond that, the house supplies what you need for prayer and langar.",
+    "q3": "Is there a dress code?",
+    "a3": "Yes—modest dress, covered head, and no shoes in the prayer areas. Shorts, sleeveless shirts, or very casual beachwear are not suited to Darbar Sahib, much like other houses of worship.",
+    "q4": "Can I take photos or videos inside?",
+    "a4": "Out of respect, please avoid photos or video in the main prayer hall unless a sewadar gives permission. Outdoor areas and much of the langar hall are usually fine—when unsure, ask.",
+    "q5": "Is Langar really free?",
+    "a5": "Langar is always free—equality and hospitality demand it. Gifts toward the kitchen are welcomed but never required.",
+    "q6": "What language are the prayers in?",
+    "a6": "Gurbani is in Punjabi/Gurmukhi; English often appears on screens. Not knowing the language does not bar you—the hospitality of the sangat speaks for itself.",
+    "q7": "Can I request a special ceremony or service?",
+    "a7": "Yes—Akhand Path, Anand Karaj, Naam Karan, and other rites can be scheduled through the Gurdwara. Please call S. Harjeet Singh at (972) 235-3388.",
+    "q8": "What happens during a typical Sunday service (Diwan)?",
+    "a8": "Sunday diwan generally blends kirtan, katha, Ardas, and langar, often roughly 10:00 AM–2:00 PM. Come and go as your schedule allows—no requirement to stay start to finish.",
+    "q9": "Are children welcome?",
+    "a9": "Children belong here. They usually sit with parents in Darbar Sahib; some weeks a side room is set aside for little ones who need to move about quietly.",
+    "q10": "What if I cannot sit on the floor?",
+    "a10": "Chairs stand ready in the main hall for anyone who cannot sit on the floor. Tell a sewadar when you arrive and they will help you settle comfortably.",
+    "q11": "Can I receive a tour of the Gurdwara?",
+    "a11": "Tours for one visitor or a whole class can be booked ahead. You will see Darbar Sahib, the langar hall, and hear how Sikhs pray and serve. Ring (972) 235-3388 to reserve a time.",
+    "q12": "How can I learn more about Sikhism?",
+    "a12": "Come to diwan, stay for langar, or phone the office for a deeper introduction to Sikh belief and practice—someone will gladly speak with you."
+  }
+}

@@ -1,0 +1,39 @@
+---
+const links = [
+	{ href: "/about/", label: "Our Gurdwara" },
+	{ href: "/about/sikhism/", label: "Sikhism" },
+	{ href: "/about/ceremonies/", label: "Ceremonies" },
+	{ href: "/about/ten-gurus/", label: "Ten Gurus" },
+	{ href: "/about/visitors-guide/", label: "Visitor's Guide" },
+];
+
+const pathname = Astro.url.pathname.replace(/\/$/, "") || "/";
+---
+
+<nav
+	aria-label="About section"
+	class="mb-10 flex flex-wrap justify-center gap-2 border-b border-special-lighter pb-4 text-sm font-medium"
+>
+	{
+		links.map(({ href, label }) => {
+			const normalized = href.replace(/\/$/, "") || "/";
+			const active =
+				pathname === normalized || (normalized !== "/about" && pathname.startsWith(normalized));
+			return (
+				<a
+					href={href}
+					class:list={[
+						"rounded-lg px-3 py-1.5 transition-colors",
+						active
+							? "bg-accent-base/15 text-accent-one"
+							: "text-accent-two hover:bg-accent-base/10 hover:text-accent-one",
+					]}
+					aria-current={active ? "page" : undefined}
+					data-astro-prefetch
+				>
+					{label}
+				</a>
+			);
+		})
+	}
+</nav>

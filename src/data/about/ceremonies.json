@@ -1,0 +1,91 @@
+{
+  "hero": {
+    "eyebrow": "Sikh Traditions",
+    "title": "About Sikh Ceremonies",
+    "subtitle": "Sacred life passages and daily discipline that bind the sangat to God and to one another."
+  },
+  "ceremonies": [
+    {
+      "id": "amrit-sanchar",
+      "title": "Amrit Sanchar",
+      "gurmukhi": "ਅੰਮ੍ਰਿਤ ਸੰਚਾਰ",
+      "subtitle": "Sikh Baptism / Initiation into the Khalsa",
+      "icon": "droplets",
+      "image": "amrit_sanchar.svg",
+      "description": "Amrit Sanchar is initiation into the Khalsa Panth—the fellowship of Amritdhari Sikhs. Guru Gobind Singh Ji established it in 1699. Candidates take Amrit prepared with prayer, accept Sikh Rehat (discipline), and receive the Five Ks.",
+      "significance": "It marks a deep commitment: a new birth into the Khalsa family, vowed to God and to humanity's service.",
+      "contact": "Contact: (972) 235-3388"
+    },
+    {
+      "id": "anand-karaj",
+      "title": "Anand Karaj",
+      "gurmukhi": "ਆਨੰਦ ਕਾਰਜ",
+      "subtitle": "Sikh Wedding Ceremony",
+      "icon": "heart",
+      "image": "anand_karaj.svg",
+      "description": "Anand Karaj—the \"Blissful Union\"—is the Sikh marriage rite. Spouses walk four times around Sri Guru Granth Sahib Ji while Guru Ram Das Ji's four Lavaan (wedding hymns) are sung. Each round marks a stage of the soul's journey toward God.",
+      "significance": "The rite is more than a civil agreement: it joins two lives in shared devotion to the One."
+    },
+    {
+      "id": "akhand-path",
+      "title": "Akhand Path",
+      "gurmukhi": "ਅਖੰਡ ਪਾਠ",
+      "subtitle": "Continuous Reading of Sri Guru Granth Sahib Ji",
+      "icon": "book-open",
+      "image": "akhand_path.svg",
+      "description": "Akhand Path is a nonstop reading of Sri Guru Granth Sahib Ji from first Ang to last (1,430 Angs), usually in about forty-eight hours, taken in shifts by trained Pathis. Families and communities arrange it for weddings, births, funerals, Gurpurabs, and other occasions.",
+      "significance": "It expresses deep devotion and draws the sangat together around the Guru's wisdom.",
+      "contact": "To arrange an Akhand Path, contact S. Harjeet Singh at (972) 235-3388."
+    },
+    {
+      "id": "ardas",
+      "title": "Ardas",
+      "gurmukhi": "ਅਰਦਾਸ",
+      "subtitle": "Sikh Prayer",
+      "icon": "hands",
+      "image": "ardas.svg",
+      "description": "Ardas is the standing prayer of the Panth, hands folded, offered at the close of worship and many gatherings. It opens with Mool Mantar, recalls the Gurus and martyrs, and closes with Sarbat da Bhala—a prayer for the good of all.",
+      "significance": "It ties the person offering it to the Panth across history: gratitude for the past, presence in today, and hope for tomorrow."
+    },
+    {
+      "id": "naam-karan",
+      "title": "Naam Karan",
+      "gurmukhi": "ਨਾਮ ਕਰਣ",
+      "subtitle": "Sikh Naming Ceremony",
+      "icon": "baby",
+      "image": "naam_karan.svg",
+      "description": "At Naam Karan the sangat welcomes a newborn with a Sikh name from the Gurdwara. A Hukamnama (passage chosen at random from Guru Granth Sahib Ji) supplies the first letter of the name; boys receive Singh and girls Kaur.",
+      "significance": "From the first days of life the child is linked to the sangat and to Guru Granth Sahib Ji's teaching."
+    },
+    {
+      "id": "antam-sanskar",
+      "title": "Antam Sanskar",
+      "gurmukhi": "ਅੰਤਮ ਸੰਸਕਾਰ",
+      "subtitle": "Sikh Funeral Rites",
+      "icon": "feather",
+      "image": "antam_sanskar.svg",
+      "description": "The Sikh funeral rites, known as Antam Sanskar, emphasize the return of the soul to God. The body is cremated (as is the Sikh tradition). The ceremony includes Kirtan, the recitation of Japji Sahib, Ardas, and often the commencement of an Akhand Path. The mourning period includes the full reading of the Guru Granth Sahib Ji.",
+      "significance": "Antam Sanskar remembers the soul's homecoming to God; grief has its place, yet hope in the divine order remains central."
+    },
+    {
+      "id": "langar",
+      "title": "Langar",
+      "gurmukhi": "ਲੰਗਰ",
+      "subtitle": "Community Kitchen & Free Meals",
+      "icon": "utensils",
+      "image": "langar.svg",
+      "description": "Langar is the free community kitchen present in every Gurdwara. All visitors, regardless of religion, caste, or background, are welcome to eat together on the same level — sitting on the floor. The food is always vegetarian. Langar was established by the Sikh Gurus to embody the principle of equality and to eliminate social discrimination.",
+      "significance": "Few institutions express Sikhi as plainly as langar: daily proof of equality, compassion, and seva."
+    },
+    {
+      "id": "nitnem",
+      "title": "Nitnem",
+      "gurmukhi": "ਨਿਤਨੇਮ",
+      "subtitle": "Daily Prayers",
+      "icon": "sun",
+      "image": "nitnem.svg",
+      "description": "Nitnem refers to the daily prayers prescribed for devout Sikhs. The morning prayers (Amrit Vela) include Japji Sahib, Jaap Sahib, and Tav-Prasad Savaiye. The evening prayers include Rehras Sahib, and the bedtime prayer is Kirtan Sohila.",
+      "significance": "Nitnem weaves remembrance of Naam through morning, evening, and night."
+    }
+  ]
+}

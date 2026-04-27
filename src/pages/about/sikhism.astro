@@ -1,0 +1,158 @@
+---
+import PageLayout from "@/layouts/Base.astro";
+import AboutSubnav from "@/components/about/AboutSubnav.astro";
+import AboutPageHero from "@/components/about/AboutPageHero.astro";
+import { fvAsset } from "@/data/about/images";
+import content from "@/data/about/sikhism.json";
+
+const meta = {
+	description:
+		"Learn about Sikhism: core beliefs, the Guru Granth Sahib Ji, the Five Ks, and Sikh values — GSS of North Texas.",
+	title: "About Sikhism — GSS of North Texas",
+};
+---
+
+<PageLayout meta={meta}>
+	<AboutSubnav />
+	<AboutPageHero
+		eyebrow={content.hero.eyebrow}
+		title={content.hero.title}
+		subtitle={content.hero.subtitle}
+	/>
+
+	<section class="mb-16">
+		<h2 class="mb-4 text-2xl font-bold text-accent-two">{content.overview.title}</h2>
+		<p class="mb-10 max-w-3xl text-lg leading-relaxed">{content.overview.description}</p>
+		<div class="mb-10 grid gap-6 md:grid-cols-3">
+			{
+				content.overview.expandedContent.map((block) => (
+					<div class="rounded-xl border border-special-lighter bg-special-light/40 p-6 shadow-sm">
+						<h3 class="mb-3 text-lg font-semibold text-accent-one">{block.title}</h3>
+						<p class="leading-relaxed text-textColor/90">{block.text}</p>
+					</div>
+				))
+			}
+		</div>
+		<div class="grid grid-cols-2 gap-4 sm:grid-cols-4">
+			{
+				content.overview.facts.map((f) => (
+					<div class="rounded-lg border border-accent-one/20 bg-bgColor/80 p-4 text-center">
+						<p class="text-xl font-bold text-accent-one">{f.value}</p>
+						<p class="text-sm text-textColor/80">{f.label}</p>
+					</div>
+				))
+			}
+		</div>
+	</section>
+
+	<section class="mb-16 rounded-2xl border border-special-lighter bg-special-light/30 p-6 md:p-10">
+		<h2 class="mb-10 text-center text-2xl font-bold text-accent-two">{content.beliefs.title}</h2>
+		<div class="flex flex-col gap-14">
+			{
+				content.beliefs.items.map((belief, i) => {
+					const src = fvAsset(belief.image);
+					const left = i % 2 === 0;
+					return (
+						<article
+							class:list={[
+								"grid items-center gap-8 md:grid-cols-2 md:gap-12",
+								left ? "" : "md:[&>div:first-child]:order-2",
+							]}
+						>
+							<div class="flex justify-center">
+								<img
+									src={src}
+									alt={belief.title}
+									class="max-h-72 w-auto max-w-full rounded-xl object-contain shadow-lg"
+									loading="lazy"
+								/>
+							</div>
+							<div>
+								{belief.gurmukhi && (
+									<p lang="pa" class="mb-2 text-2xl text-accent-one">
+										{belief.gurmukhi}
+									</p>
+								)}
+								<h3 class="mb-3 text-xl font-bold text-accent-two">{belief.title}</h3>
+								<p class="mb-4 leading-relaxed">{belief.description}</p>
+								<div class="border-l-4 border-accent-one/60 pl-4">
+									<p class="text-sm font-semibold uppercase tracking-wide text-accent-one/90">
+										In practice
+									</p>
+									<p class="leading-relaxed">{belief.practice}</p>
+								</div>
+							</div>
+						</article>
+					);
+				})
+			}
+		</div>
+	</section>
+
+	<section class="mb-16">
+		<h2 class="mb-3 text-2xl font-bold text-accent-two">{content.panjKakars.title}</h2>
+		<p class="mb-10 max-w-3xl text-lg leading-relaxed">{content.panjKakars.subtitle}</p>
+		<div class="grid gap-8 md:grid-cols-2">
+			{
+				content.panjKakars.items.map((k) => (
+					<article class="overflow-hidden rounded-xl border border-special-lighter bg-bgColor/60 shadow-sm">
+						<div class="grid gap-4 p-6 sm:grid-cols-[140px_1fr] sm:items-start">
+							<img
+								src={fvAsset(k.image)}
+								alt={k.name}
+								class="mx-auto h-32 w-32 rounded-lg object-cover sm:mx-0"
+								loading="lazy"
+							/>
+							<div>
+								<p lang="pa" class="text-lg text-accent-one">
+									{k.gurmukhi}
+								</p>
+								<h3 class="text-lg font-bold">{k.name}</h3>
+								<p class="text-sm font-medium text-accent-two/90">{k.meaning}</p>
+								<p class="mt-3 leading-relaxed">{k.description}</p>
+								<p class="mt-4 text-sm leading-relaxed text-textColor/85">
+									<span class="font-semibold text-accent-one">Significance: </span>
+									{k.significance}
+								</p>
+							</div>
+						</div>
+					</article>
+				))
+			}
+		</div>
+	</section>
+
+	<section class="mb-16 rounded-2xl border border-special-lighter bg-special-light/30 p-6 md:p-10">
+		<h2 class="mb-3 text-2xl font-bold text-accent-two">{content.sikhValues.title}</h2>
+		<p class="mb-10 max-w-3xl text-lg">{content.sikhValues.subtitle}</p>
+		<div class="grid gap-8 md:grid-cols-3">
+			{
+				content.sikhValues.items.map((p) => (
+					<article class="rounded-xl border border-accent-one/15 bg-bgColor/70 p-6">
+						<img
+							src={fvAsset(p.image)}
+							alt={p.english}
+							class="mb-4 h-36 w-full rounded-lg object-contain"
+							loading="lazy"
+						/>
+						<p lang="pa" class="text-accent-one">
+							{p.punjabi}
+						</p>
+						<h3 class="mb-2 text-lg font-bold">{p.english}</h3>
+						<p class="mb-3 text-sm font-medium text-accent-two/90">{p.meaning}</p>
+						<p class="mb-4 text-sm leading-relaxed">{p.description}</p>
+						<p class="text-sm leading-relaxed text-textColor/85">
+							<span class="font-semibold text-accent-one">In practice: </span>
+							{p.practice}
+						</p>
+					</article>
+				))
+			}
+		</div>
+	</section>
+
+	<section class="mb-8 border-t border-special-lighter pt-12">
+		<h2 class="mb-4 text-2xl font-bold text-accent-two">{content.diaspora.title}</h2>
+		<p class="max-w-3xl text-lg leading-relaxed">{content.diaspora.description}</p>
+	</section>
+</PageLayout>

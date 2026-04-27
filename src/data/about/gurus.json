@@ -1,0 +1,207 @@
+{
+  "hero": {
+    "eyebrow": "The Sikh Masters",
+    "title": "The 10 Sikh Gurus",
+    "subtitle": "From 1469 to 1708 ten human Gurus guided the Panth; thereafter Sri Guru Granth Sahib Ji alone is the eternal living Guru."
+  },
+  "gurus": [
+    {
+      "number": 1,
+      "name": "Guru Nanak Dev Ji",
+      "gurmukhi": "ਗੁਰੂ ਨਾਨਕ ਦੇਵ ਜੀ",
+      "birth": 1469,
+      "jotiJot": 1539,
+      "birthplace": "Nankana Sahib (present-day Pakistan)",
+      "contributions": [
+        "Planted the roots of the Sikh path",
+        "Established the concept of Ik Onkar (One God)",
+        "Composed the Japji Sahib and other sacred hymns",
+        "Traveled far to share the message of equality and devotion",
+        "Introduced the concept of Langar (community kitchen)"
+      ],
+      "quote": "There is but One God, His name is Truth, He is the Creator, He fears none, He is without hate, He never dies, He is beyond the cycle of births and death, He is self-illuminated, He is realized by the kindness of the True Guru. He was True in the beginning, He was True when the ages commenced and has ever been True, He is also True now.",
+      "quoteSource": "Mool Mantar, Sri Guru Granth Sahib Ji"
+    },
+    {
+      "number": 2,
+      "name": "Guru Angad Dev Ji",
+      "gurmukhi": "ਗੁਰੂ ਅੰਗਦ ਦੇਵ ਜੀ",
+      "birth": 1504,
+      "jotiJot": 1552,
+      "birthplace": "Harike, Punjab",
+      "contributions": [
+        "Developed and standardized the Gurmukhi script",
+        "Expanded the Langar tradition",
+        "Gathered and safeguarded Guru Nanak Dev Ji's compositions",
+        "Promoted physical fitness and education",
+        "Added 62 of his own hymns to the Granth"
+      ],
+      "quote": "I am a sacrifice unto those, O Nanak, who repeat the True Name even once.",
+      "quoteSource": "Sri Guru Granth Sahib Ji"
+    },
+    {
+      "number": 3,
+      "name": "Guru Amar Das Ji",
+      "gurmukhi": "ਗੁਰੂ ਅਮਰ ਦਾਸ ਜੀ",
+      "birth": 1479,
+      "jotiJot": 1574,
+      "birthplace": "Basarke, Punjab",
+      "contributions": [
+        "Made Langar obligatory before audience with the Guru",
+        "Opposed caste discrimination",
+        "Established the Baoli Sahib well at Goindval",
+        "Introduced Sikh ceremonies for birth, marriage, and death",
+        "Appointed 22 Manjis (dioceses) to spread Sikhism"
+      ],
+      "quote": "One who recognizes the True Guru should serve Him without hesitation.",
+      "quoteSource": "Sri Guru Granth Sahib Ji"
+    },
+    {
+      "number": 4,
+      "name": "Guru Ram Das Ji",
+      "gurmukhi": "ਗੁਰੂ ਰਾਮ ਦਾਸ ਜੀ",
+      "birth": 1534,
+      "jotiJot": 1581,
+      "birthplace": "Lahore (present-day Pakistan)",
+      "contributions": [
+        "Founded Amritsar (originally Ramdaspur)",
+        "Composed the Anand Karaj wedding hymn (Lavan)",
+        "Prepared the sacred sarovar (pool) at Amritsar",
+        "Added 638 hymns to the Granth",
+        "Institutionalized Masand (apostles) system"
+      ],
+      "quote": "The Lord Himself is the Creator; He Himself created the Universe. Nanak meditates on the Name.",
+      "quoteSource": "Sri Guru Granth Sahib Ji"
+    },
+    {
+      "number": 5,
+      "name": "Guru Arjan Dev Ji",
+      "gurmukhi": "ਗੁਰੂ ਅਰਜਨ ਦੇਵ ਜੀ",
+      "birth": 1563,
+      "jotiJot": 1606,
+      "birthplace": "Goindval, Punjab",
+      "contributions": [
+        "Compiled the Adi Granth (original Guru Granth Sahib Ji)",
+        "Saw Harmandir Sahib (Golden Temple) to completion",
+        "Became the first Sikh martyr (Shaheed) in 1606",
+        "Added 2,218 hymns — the most of any Guru",
+        "Placed Amritsar at the heart of Sikh spiritual life"
+      ],
+      "quote": "I do not keep fasts, nor do I observe the month of Ramadaan. I serve only the One who will protect me in the end. The One Lord is my God, who is the Master of both worlds. I have abandoned worldly entanglements and I take the support of the Naam.",
+      "quoteSource": "Sri Guru Granth Sahib Ji"
+    },
+    {
+      "number": 6,
+      "name": "Guru Hargobind Ji",
+      "gurmukhi": "ਗੁਰੂ ਹਰਗੋਬਿੰਦ ਜੀ",
+      "birth": 1595,
+      "jotiJot": 1644,
+      "birthplace": "Wadali, Punjab",
+      "contributions": [
+        "Introduced Miri-Piri (spiritual and temporal sovereignty)",
+        "Wore two swords — Miri (political) and Piri (spiritual)",
+        "Raised the Akal Takht in Amritsar",
+        "Prepared Sikhs in arms for self-defense",
+        "Prevailed in four battles against Mughal forces"
+      ],
+      "quote": "The two swords of Miri and Piri are the symbols of spiritual and worldly power. Both are necessary for the protection of the Panth.",
+      "quoteSource": "Historical record"
+    },
+    {
+      "number": 7,
+      "name": "Guru Har Rai Ji",
+      "gurmukhi": "ਗੁਰੂ ਹਰ ਰਾਇ ਜੀ",
+      "birth": 1630,
+      "jotiJot": 1661,
+      "birthplace": "Kiratpur Sahib, Punjab",
+      "contributions": [
+        "Kept a strong cavalry yet taught restraint",
+        "Founded an Ayurvedic herbal hospital",
+        "Showed special care for animals and the natural world",
+        "Sent his son Ram Rai as emissary to Emperor Aurangzeb",
+        "Continued spreading Gurbani in peace"
+      ],
+      "quote": "Even if a person makes a mistake, God's love for him never diminishes.",
+      "quoteSource": "Sri Guru Granth Sahib Ji"
+    },
+    {
+      "number": 8,
+      "name": "Guru Har Krishan Ji",
+      "gurmukhi": "ਗੁਰੂ ਹਰ ਕ੍ਰਿਸ਼ਨ ਜੀ",
+      "birth": 1656,
+      "jotiJot": 1664,
+      "birthplace": "Kiratpur Sahib, Punjab",
+      "contributions": [
+        "Installed as Guru at only five years old",
+        "Ministered to smallpox sufferers in Delhi",
+        "Known as \"Bala Pir\" (Child Saint) among Hindus",
+        "Uttered \"Baba Bakale\" as he indicated his successor",
+        "Showed seva and compassion beyond his years"
+      ],
+      "quote": "Sat Sri Akal — the Timeless One is Truth.",
+      "quoteSource": "Traditional Sikh greeting"
+    },
+    {
+      "number": 9,
+      "name": "Guru Tegh Bahadur Ji",
+      "gurmukhi": "ਗੁਰੂ ਤੇਗ਼ ਬਹਾਦਰ ਜੀ",
+      "birth": 1621,
+      "jotiJot": 1675,
+      "birthplace": "Amritsar, Punjab",
+      "contributions": [
+        "Called \"Hind di Chaadar\" (Shield of India)",
+        "Gave his life upholding Kashmiri Pandits' freedom of faith",
+        "Became the second Sikh martyr (Shaheed) in 1675",
+        "Founded towns and settlements across Punjab",
+        "Composed 116 hymns in the Guru Granth Sahib Ji"
+      ],
+      "quote": "He who is not frightened, nor frightens others — such a one, O Nanak, is called truly wise.",
+      "quoteSource": "Sri Guru Granth Sahib Ji"
+    },
+    {
+      "number": 10,
+      "name": "Guru Gobind Singh Ji",
+      "gurmukhi": "ਗੁਰੂ ਗੋਬਿੰਦ ਸਿੰਘ ਜੀ",
+      "birth": 1666,
+      "jotiJot": 1708,
+      "birthplace": "Patna, Bihar",
+      "contributions": [
+        "Inaugurated the Khalsa Panth on Vaisakhi 1699",
+        "Instituted the Five Kakars (Panj Kakars) and Amrit Sanchar",
+        "Entrusted Guruship forever to Sri Guru Granth Sahib Ji",
+        "Gave men the name Singh (lion) and women Kaur (princess)",
+        "Composed Nitnem Bani including Chaupai Sahib and Jaap Sahib"
+      ],
+      "quote": "Waheguru Ji Ka Khalsa, Waheguru Ji Ki Fateh — The Khalsa belongs to God, Victory belongs to God.",
+      "quoteSource": "Guru Gobind Singh Ji"
+    }
+  ],
+  "granth": {
+    "title": "Sri Guru Granth Sahib Ji",
+    "gurmukhi": "ਸ੍ਰੀ ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਜੀ",
+    "subtitle": "The Eternal Living Guru",
+    "description": "Guru Gobind Singh Ji, before leaving this world in 1708, ended the line of human Guruship: Sri Guru Granth Sahib Ji, the scripture itself, would hold that role forever. Its 1,430 Angs carry divine hymns from the Sikh Gurus and from thirty other saints of many faiths.",
+    "facts": [
+      {
+        "label": "Total Angs (Pages)",
+        "value": "1,430"
+      },
+      {
+        "label": "Ragas (Musical Modes)",
+        "value": "31"
+      },
+      {
+        "label": "Guru compositions",
+        "value": "5,894"
+      },
+      {
+        "label": "Non-Sikh saint compositions",
+        "value": "937"
+      },
+      {
+        "label": "Languages",
+        "value": "Punjabi, Sanskrit, Hindi, Braj, Persian"
+      }
+    ]
+  }
+}

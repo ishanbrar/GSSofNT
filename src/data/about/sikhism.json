@@ -1,0 +1,175 @@
+{
+  "hero": {
+    "eyebrow": "The Sikh Faith",
+    "title": "About Sikhism",
+    "subtitle": "The world's fifth-largest religion, founded on equality, seva, and devotion to the One."
+  },
+  "overview": {
+    "title": "What Is Sikhism?",
+    "description": "The word \"Sikh\" means \"disciple\" or \"learner\" in Punjabi. Sikhism is a monotheistic path that arose in the Punjab region of South Asia in the 15th century through Guru Nanak Dev Ji. The tradition affirms one God (Waheguru), the equality of all human beings, selfless service (Seva), honest livelihood, and justice in society. More than 26 million people around the world identify as Sikh, placing it among the largest religions globally.",
+    "expandedContent": [
+      {
+        "title": "Origins & Foundation",
+        "text": "Guru Nanak Dev Ji began teaching in Punjab in 1469—in territory that today lies in Pakistan and India. He taught that God is one (Ek Onkar) and that we draw near to God through loving devotion, upright living, and service to others. Before passing, he installed his disciple Lehna as Guru Angad Dev Ji, starting a line of ten human Gurus who shepherded the Sikh sangat."
+      },
+      {
+        "title": "The Sikh Way of Life",
+        "text": "Sikh teaching holds that life is meant to unite with God through spiritual growth—through Naam Japna (remembering God's name), Kirat Karo (earning by honest work), and Vand Chhako (sharing with others). Sikhs strive for integrity, equal regard for every person, and constructive participation in society."
+      },
+      {
+        "title": "Sacred Scripture & Heritage",
+        "text": "Sikhism's scripture is Sri Guru Granth Sahib Ji: 1,430 Angs of divine hymns (Shabads) from the ten Gurus together with saints and sages from many lineages. The Guru Granth Sahib is honored as a living Guru—given a central place in each Gurdwara and at the heart of worship and daily life."
+      }
+    ],
+    "facts": [
+      {
+        "icon": "users",
+        "label": "Global Sikhs",
+        "value": "26+ Million"
+      },
+      {
+        "icon": "calendar",
+        "label": "Founded",
+        "value": "15th Century"
+      },
+      {
+        "icon": "map-pin",
+        "label": "Origin",
+        "value": "Punjab, South Asia"
+      },
+      {
+        "icon": "book-open",
+        "label": "Scripture",
+        "value": "Sri Guru Granth Sahib Ji"
+      }
+    ]
+  },
+  "beliefs": {
+    "title": "Core Beliefs",
+    "items": [
+      {
+        "icon": "infinity",
+        "title": "Ik Onkar (One God)",
+        "gurmukhi": "ੴ",
+        "image": "Ik_Onkar.png",
+        "description": "There is only one universal God — Waheguru. God is formless, timeless, and the creator of all. The symbol \"ੴ\" (Ik Onkar) represents this belief.",
+        "practice": "Each day begins with remembrance of Waheguru's name; the aim is to carry that awareness through ordinary work and family life."
+      },
+      {
+        "icon": "book-open",
+        "title": "Guru Granth Sahib Ji",
+        "image": "Guru_Granth_Sahib.png",
+        "description": "The sacred scripture is the eternal living Guru of the Sikhs. It contains 1,430 Angs (pages) of divine hymns from Sikh Gurus and saints of various faiths.",
+        "practice": "Each day it is enthroned in the Gurdwara with deep respect and read as the compass for spiritual life."
+      },
+      {
+        "icon": "heart",
+        "title": "Seva (Selfless Service)",
+        "image": "Seva.jpg",
+        "description": "Selfless service to God and humanity is a cornerstone of Sikh life. Langar (free community kitchen) is the most visible expression of Seva.",
+        "practice": "Sikhs serve in Gurdwaras and langar and look for ways to assist neighbors and others in difficulty."
+      },
+      {
+        "icon": "equal",
+        "title": "Equality of All",
+        "image": "Equality.png",
+        "description": "Sikhism rejects the caste system and discrimination. All humans are equal in the eyes of God, regardless of religion, gender, or social status.",
+        "practice": "Langar and open conversation have long welcomed people of every background to sit together as equals over a vegetarian meal."
+      },
+      {
+        "icon": "sun",
+        "title": "Simran (Meditation)",
+        "image": "Simran.png",
+        "description": "Continuous remembrance and meditation on the Name of God (Naam Japna) is central to Sikh spiritual practice.",
+        "practice": "Sikhs recite daily prayers (Nitnem) including Japji Sahib, Jaap Sahib, and Tav-Prasad Savaiye to maintain spiritual connection."
+      },
+      {
+        "icon": "briefcase",
+        "title": "Kirat Karo (Honest Living)",
+        "image": "Kirat_Karo.jpg",
+        "description": "Earning an honest livelihood through hard work and one's own effort, without exploiting others.",
+        "practice": "Sikhs are encouraged to work diligently, provide for their families ethically, and contribute honestly to society without deceit."
+      }
+    ]
+  },
+  "panjKakars": {
+    "title": "The 5 Ks (Panj Kakars)",
+    "subtitle": "Initiated Sikhs (Amritdharis) keep five articles of faith, each starting with \"K\" in Punjabi. Guru Gobind Singh Ji gave these in 1699 at the founding of the Khalsa.",
+    "items": [
+      {
+        "name": "Kesh",
+        "gurmukhi": "ਕੇਸ਼",
+        "image": "1_kesha.png",
+        "meaning": "Uncut Hair",
+        "description": "Uncut hair is a symbol of acceptance of God's will and the natural form as God created us. Sikhs who maintain Kesh cover their hair with a Dastar (turban), which is also a spiritual crown representing dignity and self-respect.",
+        "significance": "Kesh reminds Sikhs to accept God's creation as natural and to maintain the form in which God created us. The turban protects the hair and symbolizes sovereignty and dedication to truth."
+      },
+      {
+        "name": "Kangha",
+        "gurmukhi": "ਕੰਘਾ",
+        "image": "2_kangha.png",
+        "meaning": "Wooden Comb",
+        "description": "A wooden comb is used to keep the hair clean and tidy. It is typically worn in the hair throughout the day, symbolizing discipline, order, and cleanliness in life.",
+        "significance": "Kangha represents the importance of maintaining both physical and spiritual hygiene. Just as the comb orders the hair, Sikhs strive to order their lives according to God's will."
+      },
+      {
+        "name": "Kara",
+        "gurmukhi": "ਕੜਾ",
+        "image": "3_kara.jpg",
+        "meaning": "Steel Bracelet",
+        "description": "A steel bracelet worn on the right wrist. It is a symbol of the eternal nature of God — without beginning or end — and serves as a reminder to refrain from wrongdoing.",
+        "significance": "Kara is a visible symbol of faith that connects the Sikh to God constantly. Its circular shape represents the eternal, infinite nature of God and the unending cycle of life and death."
+      },
+      {
+        "name": "Kachera",
+        "gurmukhi": "ਕਛੈਰਾ",
+        "image": "4_kachera.jpg",
+        "meaning": "Cotton Undergarment",
+        "description": "A cotton undergarment worn as a symbol of self-control, modesty, and readiness for action. It represents discipline in personal life and a commitment to purity.",
+        "significance": "Kachera reminds Sikhs to maintain physical and moral discipline. It promotes modesty and reminds the wearer that God is aware of all actions, even those hidden from others."
+      },
+      {
+        "name": "Kirpan",
+        "gurmukhi": "ਕਿਰਪਾਨ",
+        "image": "5_kirpan.jpg",
+        "meaning": "Steel Sword",
+        "description": "A steel sword carried in a harness, representing the duty to defend the weak and stand against injustice. It is a symbol of dignity, self-defense, and the fight against oppression.",
+        "significance": "Kirpan embodies the Sikh commitment to justice and protecting the innocent. It serves as a reminder that Sikhs must be ready to sacrifice themselves for righteousness and defend the helpless."
+      }
+    ]
+  },
+  "sikhValues": {
+    "title": "Three Pillars of Sikhism",
+    "subtitle": "The three roots of Sikh life that Guru Nanak Dev Ji set forth for everyday spiritual practice.",
+    "items": [
+      {
+        "punjabi": "ਨਾਮ ਜਪੋ",
+        "english": "Naam Japo",
+        "image": "1_naam_japo.png",
+        "meaning": "Meditate on God's Name",
+        "description": "Keep God in your heart and mind through prayer, meditation, and the recitation of Gurbani. Naam Japna involves repeating God's name and reflecting on the divine qualities.",
+        "practice": "Sikhs begin each day with Nitnem (daily prayers), including Japji Sahib, Jaap Sahib, and Tav-Prasad Savaiye. Meditation on Waheguru's name is practiced throughout the day."
+      },
+      {
+        "punjabi": "ਕਿਰਤ ਕਰੋ",
+        "english": "Kirat Karo",
+        "image": "2_kirat_karo.png",
+        "meaning": "Earn an Honest Living",
+        "description": "Work hard, treat people fairly, and earn through righteous means. Kirat Karo emphasizes honest labor and discourages exploitation of others for personal gain.",
+        "practice": "Sikhs are expected to earn their livelihood through honest work, contribute to society, and maintain their families without resorting to unethical or dishonest practices."
+      },
+      {
+        "punjabi": "ਵੰਡ ਛਕੋ",
+        "english": "Vand Chhako",
+        "image": "3_vand_chhako.png",
+        "meaning": "Share with Others",
+        "description": "Give generously to those in need, support the community, and practice Seva (selfless service). Vand Chhako promotes sharing resources and caring for the less fortunate.",
+        "practice": "Sikhs are encouraged to share their earnings, food, and resources with others. The Langar (community kitchen) is the most celebrated expression of this principle."
+      }
+    ]
+  },
+  "diaspora": {
+    "title": "Sikhism in North Texas",
+    "description": "North Texas hosts one of the state's largest Sikh communities. Since 1984, Gurdwara Singh Sabha of North Texas has been a spiritual and cultural home for thousands of families and extends an open welcome to guests of every background."
+  }
+}

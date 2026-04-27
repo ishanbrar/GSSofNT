@@ -1,0 +1,71 @@
+---
+import PageLayout from "@/layouts/Base.astro";
+import AboutSubnav from "@/components/about/AboutSubnav.astro";
+import AboutPageHero from "@/components/about/AboutPageHero.astro";
+import { ceremonyImageById } from "@/data/about/images";
+import content from "@/data/about/ceremonies.json";
+
+const meta = {
+	description:
+		"Sikh ceremonies at GSS of North Texas: Amrit Sanchar, Anand Karaj, Akhand Path, Ardas, Naam Karan, Antam Sanskar, Langar, and Nitnem.",
+	title: "About Sikh Ceremonies — GSS of North Texas",
+};
+---
+
+<PageLayout meta={meta}>
+	<AboutSubnav />
+	<AboutPageHero
+		eyebrow={content.hero.eyebrow}
+		title={content.hero.title}
+		subtitle={content.hero.subtitle}
+	/>
+
+	<div class="flex flex-col gap-16 md:gap-20">
+		{
+			content.ceremonies.map((c, i) => {
+				const src = ceremonyImageById[c.id];
+				const left = i % 2 === 0;
+				return (
+					<article id={c.id} class="scroll-mt-28">
+						<div
+							class:list={[
+								"grid items-center gap-8 md:grid-cols-2 md:gap-12 lg:gap-16",
+								left ? "" : "md:[&>div:first-child]:order-2",
+							]}
+						>
+							<div class="flex justify-center">
+								{src && (
+									<img
+										src={src}
+										alt={c.title}
+										class="max-h-80 w-auto max-w-full rounded-xl object-contain shadow-lg"
+										loading="lazy"
+									/>
+								)}
+							</div>
+							<div>
+								<p lang="pa" class="text-xl text-accent-one md:text-2xl">
+									{c.gurmukhi}
+								</p>
+								<h2 class="mt-1 text-2xl font-bold text-accent-two md:text-3xl">{c.title}</h2>
+								<p class="mt-2 font-medium text-accent-two/90">{c.subtitle}</p>
+								<p class="mt-5 leading-relaxed">{c.description}</p>
+								<div class="mt-6 border-l-4 border-accent-one pl-4">
+									<p class="text-sm font-semibold uppercase tracking-wide text-accent-one">
+										Significance
+									</p>
+									<p class="mt-1 leading-relaxed">{c.significance}</p>
+								</div>
+								{c.contact && (
+									<p class="mt-4 rounded-lg bg-accent-base/10 px-4 py-3 text-sm font-medium">
+										{c.contact}
+									</p>
+								)}
+							</div>
+						</div>
+					</article>
+				);
+			})
+		}
+	</div>
+</PageLayout>

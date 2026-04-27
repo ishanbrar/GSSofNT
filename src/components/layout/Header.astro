@@ -1,13 +1,36 @@
 ---
 import Search from "@/components/Search.astro";
 import ThemeToggle from "@/components/ThemeToggle.astro";
-import { siteConfig, menuLinks } from "@/site.config";
+import { siteConfig, navEntries, type NavChild, type NavEntry } from "@/site.config";
 import { Icon } from "astro-icon/components";
+
+const path = Astro.url.pathname;
+const norm = path.replace(/\/$/, "") || "/";
+
+function normalizePath(u: string): string {
+	return u.replace(/\/$/, "") || "/";
+}
+
+function isCurrent(linkPath: string): boolean {
+	return norm === normalizePath(linkPath);
+}
+
+function isAboutSection(): boolean {
+	return norm === "/about" || norm.startsWith("/about/");
+}
+
+function groupSectionActive(entry: Extract<NavEntry, { type: "group" }>): boolean {
+	if (entry.title === "About") return isAboutSection();
+	return entry.children.some((c) => {
+		const p = normalizePath(c.path);
+		return norm === p || norm.startsWith(`${p}/`);
+	});
+}
 ---
 
 <header
 	id="main-header"
-	class="fixed px-4 md:px-0 left-0 z-20 flex items-center md:relative top-0 h-16 w-full bg-bgColor md:bg-transparent overflow-hidden"
+	class="fixed px-4 md:px-0 left-0 z-20 flex items-center md:relative top-0 h-16 w-full bg-bgColor md:bg-transparent overflow-hidden md:overflow-visible"
 >	
 	<!-- Background 
 			TODO: This approach is not optimal and requires improvements. 
@@ -54,7 +77,7 @@ import { Icon } from "astro-icon/components";
 			</a>
 			<nav
 				aria-label="Main menu"
-				class="top-20 text-sm mx-auto ml-4 ml-auto hidden flex-col items-end justify-center gap-x-4 rounded-md bg-bgColor font-medium text-accent-two shadow backdrop-blur group-[.menu-open]:z-50 group-[.menu-open]:flex sm:static sm:z-auto sm:flex-row sm:items-center sm:rounded-none sm:bg-transparent sm:shadow-none sm:backdrop-blur-none md:flex"
+				class="top-20 text-sm mx-auto ml-4 ml-auto hidden flex-col items-end justify-center gap-x-4 rounded-md bg-bgColor font-medium text-accent-two shadow backdrop-blur group-[.menu-open]:z-50 group-[.menu-open]:flex sm:static sm:z-auto sm:flex-row sm:items-center sm:rounded-none sm:bg-transparent sm:shadow-none sm:backdrop-blur-none md:flex md:overflow-visible"
 				id="main-navigation-menu"
 			>	
 				<!--				
@@ -82,18 +105,55 @@ import { Icon } from "astro-icon/components";
 				</a>
 				-->
 
-				<!-- Ссылки меню -->
 				{
-					menuLinks.map((link) => (
-						<a
-							aria-current={Astro.url.pathname === link.path ? "page" : false}
-							class="underline-offset-2 hover:underline"
-							data-astro-prefetch
-							href={link.path}
-						>
-							{link.title}
-						</a>
-					))
+					navEntries.map((entry) =>
+						entry.type === "link" ? (
+							<a
+								aria-current={isCurrent(entry.path) ? "page" : false}
+								class="underline-offset-2 hover:underline"
+								data-astro-prefetch
+								href={entry.path}
+							>
+								{entry.title}
+							</a>
+						) : (
+							<div class="group/about relative">
+								<a
+									aria-current={groupSectionActive(entry) ? "page" : false}
+									class="inline-flex items-center gap-1 underline-offset-2 hover:underline"
+									data-astro-prefetch
+									href={entry.path}
+									aria-haspopup="true"
+								>
+									{entry.title}
+									<Icon
+										class="size-3.5 opacity-70"
+										name="solar:alt-arrow-down-linear"
+										aria-hidden="true"
+									/>
+								</a>
+								<div
+									role="menu"
+									aria-label={`${entry.title} pages`}
+									class="pointer-events-none invisible absolute left-0 top-full z-[100] min-w-[13rem] pt-2 opacity-0 transition-opacity duration-150 group-hover/about:pointer-events-auto group-hover/about:visible group-hover/about:opacity-100 group-focus-within/about:pointer-events-auto group-focus-within/about:visible group-focus-within/about:opacity-100 md:before:absolute md:before:-top-2 md:before:left-0 md:before:right-0 md:before:h-3 md:before:content-['']"
+								>
+									<div class="rounded-lg border border-special-lighter bg-bgColor py-2 shadow-xl ring-1 ring-textColor/5">
+										{entry.children.map((child: NavChild) => (
+											<a
+												role="menuitem"
+												aria-current={isCurrent(child.path) ? "page" : false}
+												class="block px-4 py-2 text-left text-sm hover:bg-accent-base/10 hover:text-accent-one"
+												data-astro-prefetch
+												href={child.path}
+											>
+												{child.title}
+											</a>
+										))}
+									</div>
+								</div>
+							</div>
+						),
+					)
 				}
 				
 				<!-- Contact link targets src/pages/contact.astro -->
@@ -234,18 +294,33 @@ import { Icon } from "astro-icon/components";
 			class="text-lg absolute inset-0 flex flex-col items-center justify-center gap-y-4 text-center font-medium text-accent-two"
 			id="nav-menu-mobile"
 		>
-			<!-- Ссылки меню -->
 			{
-				menuLinks.map((link) => (
-					<a
-						aria-current={Astro.url.pathname === link.path ? "page" : false}
-						class="underline-offset-2 hover:underline"
-						data-astro-prefetch
-						href={link.path}
-					>
-						{link.title}
-					</a>
-				))
+				navEntries.map((entry) =>
+					entry.type === "link" ? (
+						<a
+							aria-current={isCurrent(entry.path) ? "page" : false}
+							class="underline-offset-2 hover:underline"
+							data-astro-prefetch
+							href={entry.path}
+						>
+							{entry.title}
+						</a>
+					) : (
+						<>
+							<span class="text-base font-semibold text-accent-one/90">{entry.title}</span>
+							{entry.children.map((child: NavChild) => (
+								<a
+									aria-current={isCurrent(child.path) ? "page" : false}
+									class="pl-4 underline-offset-2 hover:underline"
+									data-astro-prefetch
+									href={child.path}
+								>
+									{child.title}
+								</a>
+							))}
+						</>
+					),
+				)
 			}
 			<a
 				class="flex h-8 items-center rounded-lg bg-accent-base/5 px-4 text-accent-base underline-offset-2 hover:bg-accent-base/10"
