@@ -45,4 +45,9 @@ export const navEntries: NavEntry[] = [
 	},
 	{ type: "link", path: "/why/", title: "Sikh History Museum" },
 	{ type: "link", path: "/gallery/", title: "Gallery" },
+	{
+		type: "link",
+		path: "https://gss-khalsa-attendance.vercel.app/app",
+		title: "Khalsa School",
+	},
 ];
