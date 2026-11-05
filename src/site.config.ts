@@ -30,7 +30,6 @@ export type NavEntry =
 
 /** Main navigation: used in Header (and can be mirrored in Footer). */
 export const navEntries: NavEntry[] = [
-	{ type: "link", path: "/", title: "Home" },
 	{
 		type: "group",
 		path: "/about/",
